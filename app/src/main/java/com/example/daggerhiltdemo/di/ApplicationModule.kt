@@ -9,7 +9,6 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttp
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -20,6 +19,15 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 class ApplicationModule {
+
+
+    @ApiKey
+    @Provides
+    fun provideApiKey() : String = "123-api-xyz"
+
+    @LibraryKey
+    @Provides
+    fun provideLibraryKey() : String ="lib-key-334"
 
     @Provides
     @Named(value = "base_url")
