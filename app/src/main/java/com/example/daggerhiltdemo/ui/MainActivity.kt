@@ -1,7 +1,8 @@
-package com.example.daggerhiltdemo
+package com.example.daggerhiltdemo.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.daggerhiltdemo.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
