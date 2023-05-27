@@ -1,0 +1,21 @@
+1. Add a dagger-hilt dependencies in the module build.gradle(app/build.gradle)
+2. Apply dagger-hilt plugin project level in project build.gradle(build.gradle)\
+3. Apply dagger-hilt plugin at module level app/build.gradle file.
+
+Applying Dagger:
+STEP 01:
+    01-Create App class extending from Application, set it in AndroidManifest.xml
+    02-Annotate it with @HiltAndroidApp
+    THIS STEP IS MANDATORY IF YOU ARE USING dagger-hilt IN PROJECT, THIS WILL CREATE ALL NECESSARY MODULE REQUIRED.
+STEP 02:
+    01-To have the dependencies either provided we must declare dagger Module class which we annotate with @Module(dagger) annotation.
+    02-We must install this module to component, dagger-hilt has many inbuilt component eg. ApplicationComponent, ActivityComponent, FragmentComponent, ServiceComponent etc.
+    03-To install the dagger module in lets in ApplicationComponent annotate it with @InstallIn(ApplicationComponent::class)
+    Note-ApplicationComponent::class is deprecated in dagger ver2.30.0 and removed in ver2.30.1 alternate is SingletonComponent::class. visit[https://stackoverflow.com/a/69422769]
+STEP 03:
+    01-Define Activity,Fragment and annotate it with @AndroidEntryPoint, this tells dagger-hilt to inject the dependencies.
+    @AndroidEntryPoint can be apply on Activity, Fragment, View, Service, BroadcastReceiver
+STEP 04:
+    01-If you are using ViewModel then apply @HiltViewModel and do constructor injection via @Inject annotation
+STEP 05:
+    To define different bindings one can use @Qualifier annotation, see demo source code.
