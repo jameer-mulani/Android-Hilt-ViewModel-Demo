@@ -1,4 +1,4 @@
-package com.example.daggerhiltdemo.ui
+package com.example.daggerhiltdemo.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
