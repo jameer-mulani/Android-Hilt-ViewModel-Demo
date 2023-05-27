@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
 }
 
 apply plugin: 'kotlin-kapt'
@@ -53,6 +54,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    kapt {
+        correctErrorTypes true
     }
 }
 
