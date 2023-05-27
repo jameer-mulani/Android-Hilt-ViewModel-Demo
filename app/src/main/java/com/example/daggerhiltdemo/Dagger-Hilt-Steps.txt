@@ -18,4 +18,4 @@ STEP 03:
 STEP 04:
     01-If you are using ViewModel then apply @HiltViewModel and do constructor injection via @Inject annotation
 STEP 05:
-    To define different bindings one can use @Qualifier annotation, see demo source code.
+    To define different bindings one can use @Qualifier annotation, see demo source code.(field injection may not work in viewmodel case)
