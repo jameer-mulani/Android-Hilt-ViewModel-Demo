@@ -37,7 +37,6 @@ android {
 
     productFlavors{
         dev{
-            applicationIdSuffix ".dev"
             dimension 'mode'
         }
     }
